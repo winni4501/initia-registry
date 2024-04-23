@@ -20,63 +20,54 @@ A sample chain.json includes the following information.
 ```json
 {
   "$schema": "../../chain.schema.json",
-  "chain_name": "initia",
-  "chain_id": "mahalo-2",
+  "chain_name": "minimove",
+  "chain_id": "minimove-2",
   "website": "https://initia.xyz",
-  "pretty_name": "Initia",
+  "pretty_name": "Minimove",
   "status": "live",
   "network_type": "devnet",
   "bech32_prefix": "init",
-  "daemon_name": "initiad",
-  "node_home": "$HOME/.initia",
+  "daemon_name": "minitiad",
+  "node_home": "$HOME/.minitia",
   "key_algos": ["secp256k1"],
   "slip44": 118,
   "fees": {
     "fee_tokens": [
       {
-        "denom": "uinit",
+        "denom": "l2/2588fd87a8e081f6a557f43ff14f05dddf5e34cb27afcefd6eaf81f1daea30d0",
         "fixed_min_gas_price": 0.15,
         "low_gas_price": 0.15,
         "average_gas_price": 0.15,
         "high_gas_price": 0.4
       },
       {
-        "denom": "ueth"
-      },
-      {
-        "denom": "uusdc"
+        "denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
+        "fixed_min_gas_price": 0.15,
+        "low_gas_price": 0.15,
+        "average_gas_price": 0.15,
+        "high_gas_price": 0.4
       }
     ]
   },
   "staking": {
-    "staking_tokens": [
-      {
-        "denom": "uinit"
-      },
-      {
-        "denom": "move/dbf06c48af3984ec6d9ae8a9aa7dbb0bb1e784aa9b8c4a5681af660cf8558d7d"
-      },
-      {
-        "denom": "move/a2b0d3c8e53e379ede31f3a361ff02716d50ec53c6b65b8c48a81d5b06548200"
-      }
-    ]
+    "staking_tokens": []
   },
   "codebase": {
-    "git_repo": "https://github.com/initia-labs/initia",
+    "git_repo": "https://github.com/initia-labs/minimove",
     "recommended_version": "v0.2.3",
-    "compatible_versions": ["v0.2.3"],
+    "compatible_versions": ["v0.2.3", "main"],
     "binaries": {
-      "linux/amd64": "https://initia.s3.ap-southeast-1.amazonaws.com/mahalo-2/initia_v0.2.3_Linux_x86_64.tar.gz",
-      "linux/arm64": "https://initia.s3.ap-southeast-1.amazonaws.com/mahalo-2/initia_v0.2.3_Linux_aarch64.tar.gz",
-      "darwin/amd64": "https://initia.s3.ap-southeast-1.amazonaws.com/mahalo-2/initia_v0.2.3_Darwin_x86_64.tar.gz",
-      "darwin/arm64": "https://initia.s3.ap-southeast-1.amazonaws.com/mahalo-2/initia_v0.2.3_Darwin_aarch64.tar.gz"
+      "linux/amd64": "https://initia.s3.ap-southeast-1.amazonaws.com/minimove-2/minimove_v0.2.3_Linux_x86_64.tar.gz",
+      "linux/arm64": "https://initia.s3.ap-southeast-1.amazonaws.com/minimove-2/minimove_v0.2.3_Linux_aarch64.tar.gz",
+      "darwin/amd64": "https://initia.s3.ap-southeast-1.amazonaws.com/minimove-2/minimove_v0.2.3_Darwin_x86_64.tar.gz",
+      "darwin/arm64": "https://initia.s3.ap-southeast-1.amazonaws.com/minimove-2/minimove_v0.2.3_Darwin_aarch64.tar.gz"
     },
     "genesis": {
-      "genesis_url": "https://initia.s3.ap-southeast-1.amazonaws.com/mahalo-2/genesis.json"
+      "genesis_url": "https://initia.s3.ap-southeast-1.amazonaws.com/minimove-2/genesis.json"
     },
     "versions": []
   },
-  "description": "Initia Closed Devnet",
+  "description": "Minimove Closed Devnet",
   "peers": {
     "seeds": [],
     "persistent_peers": []
@@ -84,25 +75,25 @@ A sample chain.json includes the following information.
   "apis": {
     "rpc": [
       {
-        "address": "https://rpc.mahalo-2.initia.xyz",
+        "address": "https://rpc.minimove-2.initia.xyz",
         "provider": "Foundation"
       }
     ],
     "rest": [
       {
-        "address": "https://lcd.mahalo-2.initia.xyz",
+        "address": "https://lcd.minimove-2.initia.xyz",
         "provider": "Foundation"
       }
     ],
     "api": [
       {
-        "address": "https://api.mahalo-2.initia.xyz",
+        "address": "https://api.minimove-2.initia.xyz",
         "provider": "Foundation"
       }
     ],
     "grpc": [
       {
-        "address": "grpc://34.87.121.251:9090",
+        "address": "grpc://34.124.237.204:9090",
         "provider": "Foundation"
       }
     ]
@@ -110,63 +101,49 @@ A sample chain.json includes the following information.
   "explorers": [
     {
       "kind": "explorer",
-      "url": "https://explorer.mahalo-2.initia.xyz/?layer=l1%2520testnet",
-      "tx_page": "https://explorer.mahalo-2.initia.xyz/tx/${txHash}?layer=l1%20testnet",
-      "account_page": "https://explorer.mahalo-2.initia.xyz/address/${accountAddress}?layer=l1%20testnet"
+      "url": "https://explorer.minimove-2.initia.xyz/?layer=minimove",
+      "tx_page": "https://explorer.minimove-2.initia.xyz/tx/${txHash}?layer=minimove",
+      "account_page": "https://explorer.minimove-2.initia.xyz/address/${accountAddress}?layer=minimove"
     },
     {
       "kind": "initia scan",
-      "url": "https://scan.initia.xyz/mahalo-2",
-      "tx_page": "https://scan.initia.xyz/mahalo-2/txs/${txHash}",
-      "account_page": "https://scan.initia.xyz/mahalo-2/accounts/${accountAddress}"
-    }
-  ],
-  "faucets": [
-    {
-      "kind": "faucet",
-      "url": "https://faucet.mahalo-2.initia.xyz/"
+      "url": "https://scan.initia.xyz/minimove-2",
+      "tx_page": "https://scan.initia.xyz/minimove-2/txs/${txHash}",
+      "account_page": "https://scan.initia.xyz/minimove-2/accounts/${accountAddress}"
     }
   ],
   "images": [
     {
-      "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.png",
-      "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.svg"
+      "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.png",
+      "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.svg"
     }
   ],
   "logo_URIs": {
-    "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.png",
-    "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.svg"
+    "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.png",
+    "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.svg"
   },
   "metadata": {
-    "is_l1": true,
+    "op_bridge_id": "2",
+    "op_denoms": ["uinit"],
     "ibc_channels": [
       {
-        "chain_id": "minimove-2",
+        "chain_id": "mahalo-2",
         "port_id": "transfer",
         "channel_id": "channel-0",
         "version": "ics20-1"
       },
       {
-        "chain_id": "minimove-2",
+        "chain_id": "mahalo-2",
         "port_id": "nft-transfer",
-        "channel_id": "channel-2",
-        "version": "ics721-1"
-      },
-
-      {
-        "chain_id": "miniwasm-2",
-        "port_id": "transfer",
         "channel_id": "channel-1",
-        "version": "ics20-1"
-      },
-      {
-        "chain_id": "miniwasm-2",
-        "port_id": "nft-transfer",
-        "channel_id": "channel-3",
         "version": "ics721-1"
       }
     ],
-    "assetlist": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/assetlist.json"
+    "assetlist": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/assetlist.json",
+    "minitia": {
+      "type": "minimove",
+      "version": "v0.2.3"
+    }
   }
 }
 ```
@@ -186,13 +163,13 @@ An example assetlist json contains the following structure:
 ```json
 {
   "$schema": "../../assetlist.schema.json",
-  "chain_name": "initia",
+  "chain_name": "minimove",
   "assets": [
     {
       "description": "The native token of Initia",
       "denom_units": [
         {
-          "denom": "uinit",
+          "denom": "l2/2588fd87a8e081f6a557f43ff14f05dddf5e34cb27afcefd6eaf81f1daea30d0",
           "exponent": 0
         },
         {
@@ -200,55 +177,27 @@ An example assetlist json contains the following structure:
           "exponent": 6
         }
       ],
-      "base": "uinit",
+      "base": "l2/2588fd87a8e081f6a557f43ff14f05dddf5e34cb27afcefd6eaf81f1daea30d0",
       "display": "INIT",
       "name": "Initia Native Token",
       "symbol": "INIT",
       "coingecko_id": "",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.png",
+          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.svg"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/INIT.svg"
-      }
-    },
-    {
-      "description": "The fake ETH",
-      "denom_units": [
-        {
-          "denom": "ueth",
-          "exponent": 0
-        },
-        {
-          "denom": "ETH",
-          "exponent": 6
-        }
-      ],
-      "base": "ueth",
-      "display": "ETH",
-      "name": "Fake ETH Token",
-      "symbol": "ETH",
-      "coingecko_id": "",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH.svg"
-        }
-      ],
-      "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.png",
+        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/INIT.svg"
       }
     },
     {
       "description": "The fake USDC",
       "denom_units": [
         {
-          "denom": "uusdc",
+          "denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
           "exponent": 0
         },
         {
@@ -256,76 +205,20 @@ An example assetlist json contains the following structure:
           "exponent": 6
         }
       ],
-      "base": "uusdc",
+      "base": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
       "display": "USDC",
-      "name": "Fake USDC Token",
+      "name": "USDC",
       "symbol": "USDC",
       "coingecko_id": "",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/USDC.png",
+          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/USDC.svg"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC.svg"
-      }
-    },
-    {
-      "description": "The LP token of USDC-INIT",
-      "denom_units": [
-        {
-          "denom": "move/dbf06c48af3984ec6d9ae8a9aa7dbb0bb1e784aa9b8c4a5681af660cf8558d7d",
-          "exponent": 0
-        },
-        {
-          "denom": "USDC-INIT LP",
-          "exponent": 6
-        }
-      ],
-      "base": "move/dbf06c48af3984ec6d9ae8a9aa7dbb0bb1e784aa9b8c4a5681af660cf8558d7d",
-      "display": "USDC-INIT LP",
-      "name": "USDC-INIT LP Token",
-      "symbol": "USDC-INIT LP",
-      "coingecko_id": "",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC-INIT.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC-INIT.svg"
-        }
-      ],
-      "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC-INIT.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/USDC-INIT.svg"
-      }
-    },
-    {
-      "description": "The LP token of ETH-INIT",
-      "denom_units": [
-        {
-          "denom": "move/a2b0d3c8e53e379ede31f3a361ff02716d50ec53c6b65b8c48a81d5b06548200",
-          "exponent": 0
-        },
-        {
-          "denom": "ETH-INIT LP",
-          "exponent": 6
-        }
-      ],
-      "base": "move/a2b0d3c8e53e379ede31f3a361ff02716d50ec53c6b65b8c48a81d5b06548200",
-      "display": "ETH-INIT LP",
-      "name": "ETH-INIT LP Token",
-      "symbol": "ETH-INIT LP",
-      "coingecko_id": "",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH-INIT.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH-INIT.svg"
-        }
-      ],
-      "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH-INIT.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/initia/images/ETH-INIT.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/USDC.png",
+        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/minimove/images/USDC.svg"
       }
     }
   ]
