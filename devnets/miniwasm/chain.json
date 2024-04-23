@@ -1,9 +1,9 @@
 {
   "$schema": "../../chain.schema.json",
-  "chain_name": "Miniwasm",
+  "chain_name": "miniwasm",
   "chain_id": "miniwasm-2",
   "website": "https://initia.xyz",
-  "pretty_name": "Initia WasmVM L2",
+  "pretty_name": "Miniwasm",
   "status": "live",
   "network_type": "devnet",
   "bech32_prefix": "init",
@@ -104,7 +104,6 @@
   },
   "metadata": {
     "op_bridge_id": "1",
-    "creator": "0xf324bf4f355abec6d49fdfd0d45419ba99d363d9",
     "op_denoms": ["uinit"],
     "ibc_channels": [
       {
@@ -120,6 +119,10 @@
         "version": "ics721-1"
       }
     ],
-    "assetlist": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/miniwasm/assetlist.json"
+    "assetlist": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/devnets/miniwasm/assetlist.json",
+    "minitia": {
+      "type": "miniwasm",
+      "version": "v0.2.2"
+    }
   }
 }

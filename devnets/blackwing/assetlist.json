@@ -1,12 +1,12 @@
 {
   "$schema": "../../assetlist.schema.json",
-  "chain_name": "miniwasm",
+  "chain_name": "blackwing",
   "assets": [
     {
       "description": "The native token of Initia",
       "denom_units": [
         {
-          "denom": "l2/771d639f30fbe45e3fbca954ffbe2fcc26f915f5513c67a4a2d0bc1d635bdefd",
+          "denom": "l2/ad2344d0c17127cc6bce67e360f43cd6c5fa09a7b5f6f9b7b80f9dc3e0c4876e",
           "exponent": 0
         },
         {
@@ -14,7 +14,7 @@
           "exponent": 6
         }
       ],
-      "base": "l2/771d639f30fbe45e3fbca954ffbe2fcc26f915f5513c67a4a2d0bc1d635bdefd",
+      "base": "l2/ad2344d0c17127cc6bce67e360f43cd6c5fa09a7b5f6f9b7b80f9dc3e0c4876e",
       "display": "INIT",
       "name": "Initia Native Token",
       "symbol": "INIT",
